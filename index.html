@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="UyGpz9PGlzg9BYTjZDBk341-TiYC4o5_KTscDA6v6UM" />
     <title>ElectroPro - Électricien Professionnel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,13 +16,13 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
             color: #333;
         }
 
         header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #000000 0%, #0066ff 100%);
             color: white;
             padding: 1rem 0;
             position: fixed;
@@ -87,7 +90,7 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #0066ff;
             color: white;
             padding: 150px 2rem 100px;
             text-align: center;
@@ -106,8 +109,8 @@
 
         .btn {
             display: inline-block;
-            background: #ffd700;
-            color: #333;
+            background: linear-gradient(135deg, #ffd700 0%, #ff8800 100%);
+            color: #000;
             padding: 1rem 2rem;
             text-decoration: none;
             border-radius: 5px;
@@ -133,7 +136,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #1e3c72;
+            color: #0066ff;
         }
 
         .services {
@@ -161,7 +164,7 @@
         }
 
         .service-card h3 {
-            color: #1e3c72;
+            color: #0066ff;
             margin-bottom: 1rem;
         }
 
@@ -170,15 +173,27 @@
         }
 
         .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
+            display: block;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-text {
+            margin-bottom: 3rem;
         }
 
         .about-text h2 {
-            color: #1e3c72;
+            color: #0066ff;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .about-text p {
             margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #1a1a1a;
         }
 
         .stats {
@@ -198,7 +213,7 @@
 
         .stat-number {
             font-size: 2.5rem;
-            color: #667eea;
+            color: #0066ff;
             font-weight: bold;
         }
 
@@ -232,10 +247,39 @@
         }
 
         footer {
-            background: #1e3c72;
+            background: linear-gradient(135deg, #000000 0%, #0066ff 100%);
             color: white;
             text-align: center;
             padding: 2rem;
+        }
+
+        .call-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #ffd700 0%, #ff8800 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            z-index: 999;
+            text-decoration: none;
+        }
+
+        .call-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(255, 136, 0, 0.5);
+        }
+
+        .call-button svg {
+            width: 22px;
+            height: 22px;
+            fill: #000;
         }
 
         @media (max-width: 768px) {
@@ -260,7 +304,7 @@
                 left: -100%;
                 top: 60px;
                 flex-direction: column;
-                background: #1e3c72;
+                background: linear-gradient(135deg, #000000 0%, #0066ff 100%);
                 width: 100%;
                 text-align: center;
                 transition: left 0.3s;
@@ -299,8 +343,8 @@
     </header>
 
     <section id="accueil" class="hero">
-        <h1>Votre Expert en Électricité</h1>
-        <p>Solutions professionnelles pour tous vos besoins électriques</p>
+        <h1>Illuminons Votre Quotidien</h1>
+        <p>L'Innovation Électrique au Service de Votre Confort</p>
         <a href="#contact" class="btn">Demander un Devis Gratuit</a>
     </section>
 
@@ -346,9 +390,9 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>Votre Partenaire de Confiance</h2>
-                    <p>Avec plus de 15 ans d'expérience dans le domaine de l'électricité, ElectroPro s'est imposé comme une référence en matière d'installations et de dépannages électriques.</p>
-                    <p>Notre équipe de professionnels qualifiés et certifiés met son expertise à votre service pour garantir la sécurité et la qualité de vos installations électriques.</p>
-                    <p>Nous intervenons aussi bien auprès des particuliers que des professionnels, avec un engagement sans faille pour la satisfaction client.</p>
+                    <p>ElectroPro, c'est plus de 15 ans d'expertise en électricité. Une référence reconnue pour la qualité et la sécurité de nos installations.</p>
+                    <p>Notre équipe de professionnels qualifiés et certifiés met son savoir-faire à votre service. Nous garantissons des interventions rapides, efficaces et conformes aux normes.</p>
+                    <p>Particuliers ou professionnels, nous nous adaptons à tous vos projets. Votre satisfaction est notre priorité absolue.</p>
                 </div>
                 <div class="stats">
                     <div class="stat-card">
@@ -395,6 +439,12 @@
         <p>&copy; 2025 ElectroPro. Tous droits réservés.</p>
         <p>📞 01 23 45 67 89 | 📧 contact@electropro.fr</p>
     </footer>
+
+    <a href="tel:0123456789" class="call-button" aria-label="Appeler">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+        </svg>
+    </a>
 
     <script>
         // Menu mobile toggle
