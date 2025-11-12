@@ -178,6 +178,79 @@
             background: #f4f4f4;
         }
 
+        .gallery {
+            background: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+            aspect-ratio: 4/3;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #000000 0%, #0066ff 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 0.7;
+        }
+
+        .gallery-placeholder {
+            font-size: 4rem;
+            color: #999;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-overlay p {
+            font-size: 0.9rem;
+        }
+
         .about-content {
             display: block;
             max-width: 800px;
@@ -390,6 +463,7 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#galerie">Galerie</a></li>
                 <li><a href="#apropos">À Propos</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -460,6 +534,42 @@
                 </div>
                 <h3>Maintenance</h3>
                 <p>Entretien régulier de vos installations électriques</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galerie" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Nos Réalisations</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">🔌</div>
+                    <div class="gallery-overlay">
+                        <h3>Installation Résidentielle</h3>
+                        <p>Maison individuelle - Paris</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">💡</div>
+                    <div class="gallery-overlay">
+                        <h3>Mise aux Normes</h3>
+                        <p>Appartement 3 pièces</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">🏢</div>
+                    <div class="gallery-overlay">
+                        <h3>Installation Commerce</h3>
+                        <p>Local commercial 200m²</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">🏠</div>
+                    <div class="gallery-overlay">
+                        <h3>Domotique Complète</h3>
+                        <p>Villa connectée</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
