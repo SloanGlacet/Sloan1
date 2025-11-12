@@ -256,11 +256,12 @@
             background: linear-gradient(135deg, #000000 0%, #0066ff 100%);
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 2rem 1rem;
         }
 
         footer p {
             margin: 0.5rem 0;
+            font-size: 0.95rem;
         }
 
         .footer-contact {
@@ -269,6 +270,7 @@
             align-items: center;
             gap: 2rem;
             flex-wrap: wrap;
+            margin-top: 1rem;
         }
 
         .footer-item {
@@ -281,6 +283,19 @@
             width: 20px;
             height: 20px;
             fill: white;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .footer-contact {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .footer-item {
+                width: 100%;
+                justify-content: center;
+            }
         }
 
         .call-button {
